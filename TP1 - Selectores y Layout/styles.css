@@ -1,0 +1,90 @@
+.divContenido{
+    width: 728px;
+    margin: 0 auto;
+    }
+
+h1 {
+    color: #103250;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+h2 {
+    display: block;
+    font-size:25px;
+    font-weight: 500;
+    unicode-bidi: isolate;
+}
+
+p {
+font-size: 20px;
+}
+
+.index{
+    color: #808080;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size:medium;
+}
+
+.image{
+    height: 365px;
+}
+
+
+.description{
+    font-size: 16px;
+    line-height: 18px;
+    background-color:#D3D3D3 ;
+    padding: 10px 20px;
+    margin-top: -6px;
+    border-radius: 5px;
+}
+
+/* Form Subscripción */
+
+form {
+    background-color: #d3d3d3; 
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000033; 
+    width: 500px;
+    margin: 40px ;
+    padding: 25px 30px;
+    color: #000;
+  }
+  
+
+  form h5 {
+    font-size: 20px;
+    margin: 0 0 20px;
+    text-align: center;
+
+  }
+  
+
+  form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+  
+
+  form input[type="text"],
+  form input[type="email"] {
+    width: 94%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+
+  form input[type="submit"] {
+    width: 20%;
+    padding: 12px;
+    background-color: #ffffff;
+    color: #333333;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
