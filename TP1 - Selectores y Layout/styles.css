@@ -1,4 +1,4 @@
-.divContenido{
+.divContenido {
     width: 728px;
     margin: 0 auto;
     }
@@ -20,18 +20,17 @@ p {
 font-size: 20px;
 }
 
-.index{
+.index {
     color: #808080;
     font-family: "Lucida Console", "Courier New", monospace;
     font-size:medium;
 }
 
-.image{
+.image {
     height: 365px;
 }
 
-
-.description{
+.description {
     font-size: 16px;
     line-height: 18px;
     background-color:#D3D3D3 ;
@@ -57,7 +56,6 @@ form {
     font-size: 20px;
     margin: 0 0 20px;
     text-align: center;
-
   }
   
 
@@ -76,7 +74,6 @@ form {
     border-radius: 6px;
     font-size: 14px;
   }
-  
 
   form input[type="submit"] {
     width: 20%;
