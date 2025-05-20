@@ -22,12 +22,11 @@ font-size: 20px;
 
 .index{
     color: #808080;
-    font-family: "Lucida Console", "Courier New", monospace;
     font-size:medium;
 }
 
 .image{
-    height: 365px;
+    height: 366.3px;
 }
 
 
@@ -36,7 +35,7 @@ font-size: 20px;
     line-height: 18px;
     background-color:#D3D3D3 ;
     padding: 10px 20px;
-    margin-top: -6px;
+    margin-top: -7px;
     border-radius: 5px;
 }
 
