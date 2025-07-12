@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suscripción - MEDIA SPORT</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="subscription.css" />
+
+<body class="body">
+    <header>
+        <div class="logo-container">
+            <h1>MEDIA SPORT</h1>
+            <div class="menu">☰</div>
+            <div class="user-form">👤</div>
+        </div>
+        <nav>
+            <a class="navbar-element">Ultimas Noticias</a>
+            <a class="navbar-element">Liga Argentina</a>
+            <a class="navbar-element">Formula 1 - Colapinto</a>
+            <a class="navbar-element">Seleccion Argentina</a>
+            <a class="navbar-element">Roland Garros</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2 class="form-title" id="form-title">HOLA</h2>
+            <form id="subscription-form" novalidate>
+                <div class="form-group half">
+                    <label>Nombre completo</label>
+                    <input type="text" id="nombre" />
+                    <div class="error" id="error-nombre"></div>
+                </div>
+
+                <div class="form-group half">
+                    <label>Email</label>
+                    <input type="email" id="email" />
+                    <div class="error" id="error-email"></div>
+                </div>
+
+                <div class="form-group half">
+                    <label>Contraseña</label>
+                    <input type="password" id="password" />
+                    <div class="error" id="error-password"></div>
+                </div>
+
+                <div class="form-group half">
+                    <label>Repetir Contraseña</label>
+                    <input type="password" id="repeatPassword" />
+                    <div class="error" id="error-repeatPassword"></div>
+                </div>
+
+                <div class="form-group half">
+                    <label>Edad</label>
+                    <input type="text" id="edad" />
+                    <div class="error" id="error-edad"></div>
+                </div>
+
+                <div class="form-group half">
+                    <label>Teléfono</label>
+                    <input type="text" id="telefono" />
+                    <div class="error" id="error-telefono"></div>
+                </div>
+
+                <div class="form-group half">
+                    <label>Dirección</label>
+                    <input type="text" id="direccion" />
+                    <div class="error" id="error-direccion"></div>
+                </div>
+
+                <div class="form-group half">
+                    <label>Ciudad</label>
+                    <input type="text" id="ciudad" />
+                    <div class="error" id="error-ciudad"></div>
+                </div>
+
+                <div class="form-group half">
+                    <label>Código Postal</label>
+                    <input type="text" id="cp" />
+                    <div class="error" id="error-cp"></div>
+                </div>
+
+                <div class="form-group half">
+                    <label>DNI</label>
+                    <input type="text" id="dni" />
+                    <div class="error" id="error-dni"></div>
+                </div>
+
+                <div class="submit-container">
+                    <button id="back">Volver</button>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div>© 2025 MEDIA SPORT - Todos los derechos reservados</div>
+        <a href="index.html">Volver al index</a>
+    </footer>
+
+    <script src="subscription.js"></script>
+</body>
+
+</html>
