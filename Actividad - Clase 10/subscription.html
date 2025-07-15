@@ -31,61 +31,61 @@
             <form id="subscription-form" novalidate>
                 <div class="form-group half">
                     <label>Nombre completo</label>
-                    <input type="text" id="nombre" />
+                    <input type="text" id="nombre" name="nombre"/>
                     <div class="error" id="error-nombre"></div>
                 </div>
 
                 <div class="form-group half">
                     <label>Email</label>
-                    <input type="email" id="email" />
+                    <input type="email" id="email" name="email"/>
                     <div class="error" id="error-email"></div>
                 </div>
 
                 <div class="form-group half">
                     <label>Contraseña</label>
-                    <input type="password" id="password" />
+                    <input type="password" id="password" name="password" />
                     <div class="error" id="error-password"></div>
                 </div>
 
                 <div class="form-group half">
                     <label>Repetir Contraseña</label>
-                    <input type="password" id="repeatPassword" />
+                    <input type="password" id="repeatPassword" name="repeatPassword"/>
                     <div class="error" id="error-repeatPassword"></div>
                 </div>
 
                 <div class="form-group half">
                     <label>Edad</label>
-                    <input type="text" id="edad" />
+                    <input type="text" id="edad" name="edad"/>
                     <div class="error" id="error-edad"></div>
                 </div>
 
                 <div class="form-group half">
                     <label>Teléfono</label>
-                    <input type="text" id="telefono" />
+                    <input type="text" id="telefono" name="telefono"/>
                     <div class="error" id="error-telefono"></div>
                 </div>
 
                 <div class="form-group half">
                     <label>Dirección</label>
-                    <input type="text" id="direccion" />
+                    <input type="text" id="direccion" name="direccion"/>
                     <div class="error" id="error-direccion"></div>
                 </div>
 
                 <div class="form-group half">
                     <label>Ciudad</label>
-                    <input type="text" id="ciudad" />
+                    <input type="text" id="ciudad" name="ciudad" />
                     <div class="error" id="error-ciudad"></div>
                 </div>
 
                 <div class="form-group half">
                     <label>Código Postal</label>
-                    <input type="text" id="cp" />
+                    <input type="text" id="cp" name="cp"/>
                     <div class="error" id="error-cp"></div>
                 </div>
 
                 <div class="form-group half">
                     <label>DNI</label>
-                    <input type="text" id="dni" />
+                    <input type="text" id="dni" name="dni" />
                     <div class="error" id="error-dni"></div>
                 </div>
 
@@ -95,6 +95,13 @@
                 </div>
             </form>
         </section>
+
+        <div id="modal-succes">
+            <div class="modal-content">
+                <p id="modal-close" class="close">X</p>
+                <div id="modal-message"></div>
+            </div>
+        </div>
     </main>
 
     <footer>

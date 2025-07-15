@@ -37,7 +37,7 @@ const errors = {
 
 Object.keys(fields).forEach((id) => {
     const input = document.getElementById(id);
-    const errorEl = document.getElementById("error" + id);
+    const errorEl = document.getElementById("error-" + id);
 
     input.addEventListener("blur", () => {
     const valid = fields[id](input.value.trim());

@@ -7,6 +7,7 @@ volverBtn.addEventListener("click", (e) => {
 });
 
 const form = document.getElementById("subscription-form");
+
 //Valdaciones
 const fields = {
     nombre: (val) => val.length > 6 && val.includes(" "),
@@ -27,7 +28,7 @@ const errors = {
     email: "Debe ser un email válido.",
     password: "Al menos 8 caracteres con letras y números.",
     repeatPassword: "Las contraseñas no coinciden.",
-    edad: "Debe ser mayor o igual a 18.",
+    edad: "Debe ser mayor a 18.",
     telefono: "Mínimo 7 dígitos, sin espacios ni símbolos.",
     direccion: "Debe contener letras, números y un espacio.",
     ciudad: "Debe tener al menos 3 caracteres.",
@@ -37,7 +38,7 @@ const errors = {
 
 Object.keys(fields).forEach((id) => {
     const input = document.getElementById(id);
-    const errorEl = document.getElementById("error" + id);
+    const errorEl = document.getElementById("error-" + id);
 
     input.addEventListener("blur", () => {
     const valid = fields[id](input.value.trim());
@@ -51,25 +52,52 @@ Object.keys(fields).forEach((id) => {
     });
 });
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let isValid = true;
-    let mensaje = "";
+//Mostrar modal
+function showModal(title, message) {
+  const modal = document.getElementById("modal-succes");
+  document.getElementById("modal-message").innerText = message;
+  document.querySelector("#modal-succes .modal-content h3")?.remove();
+  const h3 = document.createElement("h3");
+  h3.textContent = title;
+  document.querySelector("#modal-succes .modal-content").prepend(h3);
+  modal.style.display = "block";
+}
 
-    Object.keys(fields).forEach((id) => {
+//Cerrar del modal
+document.getElementById("modal-close").addEventListener("click", () => {
+  document.getElementById("modal-succes").style.display = "none";
+});
+
+//Envío del form
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  let isValid = true;
+  Object.keys(fields).forEach((id) => {
     const input = document.getElementById(id);
-    const val = input.value.trim();
-    const valid = fields[id](val);
+    const valid = fields[id](input.value.trim());
     if (!valid) {
-        document.getElementById("error-" + id).textContent = errors[id];
-        mensaje += `${id.toUpperCase()}: ${errors[id]}\n`;
-        isValid = false;
-    } else {
-        mensaje += `${id.toUpperCase()}: ${val}\n`;
+      document.getElementById("error-" + id).textContent = errors[id];
+      isValid = false;
     }
-    });
+  });
+  if (!isValid) return;
 
-    alert(mensaje);
+  const formData = Object.fromEntries(new FormData(form));
+  try {
+    const resp = await fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+    const data = await resp.json();
+    if (!resp.ok) throw new Error(`Status ${resp.status}: ${resp.statusText}`);
+
+    localStorage.setItem("lastSubscription", JSON.stringify(data));
+    showModal("¡Suscripción exitosa!", JSON.stringify(data, null, 2));
+  } catch (err) {
+    showModal("Error en suscripción", err.message);
+  }
 });
 
 const nombreInput = document.getElementById("nombre");
